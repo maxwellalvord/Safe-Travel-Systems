@@ -8,3 +8,4 @@
 * 11:50: Research Travel APIs
 * 1:35: troubleshoot vercel deployment
 * 2:05: more Next.js research
+* 2:35: Research/prac the 10 basic hooks (https://www.youtube.com/watch?v=TNhaISOUy6Q)
