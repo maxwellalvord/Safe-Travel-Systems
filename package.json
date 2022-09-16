@@ -1,0 +1,22 @@
+{
+  "name": "safe-travel-systems",
+  "version": "1.0.0",
+  "description": "* 8:30: create framework, starting steps etc\r * 9:00: create trello board\r * 10:00 research Next.js/Now (https://www.youtube.com/watch?v=nolv-AJkQQ0) Great Start Video",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.1",
+    "bulma": "^0.9.4",
+    "next": "^12.3.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "^18.2.0"
+  }
+}
