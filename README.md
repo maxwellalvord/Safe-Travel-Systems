@@ -10,3 +10,5 @@
 * 2:05: more Next.js research
 * 2:35: Research/prac the 10 basic hooks (https://www.youtube.com/watch?v=TNhaISOUy6Q)
 * 3:10: Research next auth and databases to use and how to host the database
+* 3:55: Research Railway.app
+

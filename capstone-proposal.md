@@ -20,7 +20,7 @@ This webpage will be deployed live for users all over the world to be able to ge
 
 ### Stretch Goals
 * Use Next Auth
-* Use Postgres with Next Auth to be able to allow users to sign in and save trip data gained in the website
+* Use Postgres or railway with Next Auth to be able to allow users to sign in and save trip data gained in the website
 * Use Primsa to allow flawless database abstraction
 
 ### Additional Notes
