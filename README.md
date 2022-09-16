@@ -7,3 +7,4 @@
 * 11:15: Research and troubleshoot Next/Link
 * 11:50: Research Travel APIs
 * 1:35: troubleshoot vercel deployment
+* 2:05: more Next.js research
