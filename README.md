@@ -6,3 +6,4 @@
 * 10:45: Research Next.js docs (https://nextjs.org/docs/api-reference/create-next-app)
 * 11:15: Research and troubleshoot Next/Link
 * 11:50: Research Travel APIs
+* 1:35: troubleshoot vercel deployment
