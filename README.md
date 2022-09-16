@@ -4,3 +4,5 @@
 * 9:00: create trello board
 * 10:00: research Next.js/Now (https://www.youtube.com/watch?v=nolv-AJkQQ0) Great Start Video
 * 10:45: Research Next.js docs (https://nextjs.org/docs/api-reference/create-next-app)
+* 11:15: Research and troubleshoot Next/Link
+* 11:50: Research Travel APIs
