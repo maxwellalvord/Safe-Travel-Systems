@@ -16,3 +16,4 @@
 #### Friday, 09/23
 * 9:00: Read and research Vercel documentation
 * 10:00: Research Next.js layout and Start building a diagram
+* 11:00: Research possible CSS Library solutions (https://tailwindcss.com/docs/utility-first) (https://animate.style/)
