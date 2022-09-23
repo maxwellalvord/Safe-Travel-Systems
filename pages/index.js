@@ -17,17 +17,18 @@ export default function Home() {
     currentlyVisibleState = <EditDestinationForm
     destination = {selectedDestination}
     onEditDestination ={handleEditingDestinationList}
-    />
+    />;
   }
   else if (selectedDestination != null) {
     currentlyVisibleState = <DestinationDetail
     destination = {selectedDestination}
     onClickingDelete = {handleDeletingDestination}
     OnClickingEdit = {handleEditingDestination}
-    />
+    />;
   } else if (formVisableOnPage) {
     currentlyVisibleState = <newDestinationForm
     onNewDestinationCreation = {handleChangingSelectedDestination}
+    />;
   }
 
 
