@@ -8,6 +8,12 @@ color: #5c8c9c;
 
 export default function Home() {
   
+  let currentlyVisibleState = null;
+
+  if (selectedDestination != null) {
+    currentlyVisibleState = <DestinationDetail
+    
+  }
 
   return (
     <>
