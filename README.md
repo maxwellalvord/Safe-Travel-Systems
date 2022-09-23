@@ -18,3 +18,5 @@
 * 10:00: Research Next.js layout and Start building a diagram
 * 11:00: Research possible CSS Library solutions (https://tailwindcss.com/docs/utility-first) (https://animate.style/)
 * 1:30: Research and test out tailwind css styles
+* 2:50: Refer to previous React projects and research next.js implementation
+
