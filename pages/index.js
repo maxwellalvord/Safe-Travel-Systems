@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      <Link href='/about'><A >About</A></Link> &emsp;
+      <Link href='/about'><A>About</A></Link> &emsp;
       <Link href='/'><A>Home</A></Link> &emsp;
       <Link href='/signin'><A>Sign In</A></Link>
     </>
