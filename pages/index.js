@@ -1,30 +1,33 @@
 // import styles from '../styles/Home.module.css'
-import styled from 'styled-components';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import React from 'react';
 import NewDestinationForm from './newDestinationForm';
 import DestinationList from './destinationList';
 // import EditDestinationForm from './EditDestinationForm';
 import DestinationDetail from './destinationDetail';
+// import weatherApi from './weatherApi';
 
 
-const Head = styled.a`
-color: #5c8c9c;
-`;
 
 export default function Home() {
 
   let currentlyVisibleState = null;
   let buttonText = null;
   let errorText = null;
-  
+
   const [formVisibleOnPage, setFormVisibleOnPage] = useState(false);
   const [mainDestinationList, setMainDestinationList] = useState([]);
   const [selectedDestination, setSelectedDestination] = useState(null); 
   const [editing, setEditing] = useState(false);
 
+  // useEffect(() => {
+  //   console.log(weatherApi.results);
+
+      
+  // }, [selectedDestination])
+
   useEffect(() => {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${selectedDestination.City}&appid=${process.env.REACT_APP_API_KEY}`)
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${selectedDestination}&appid=${process.env.REACT_APP_API_KEY}`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`${response.status}: ${response.statusText}`);
@@ -41,7 +44,7 @@ export default function Home() {
         // We create an action and then dispatch it. 
         return errorText = error;
       });
-    }, [handleAddingNewDestinationToList])
+    }, [selectedDestination])
   
   const handleClick = () => {
     if (selectedDestination != null) {
@@ -115,11 +118,9 @@ export default function Home() {
 
   return (
     <React.Fragment>
-      <Head>
       {currentlyVisibleState}
-      {error ? !null : errorText + <p> Their has been an error with your destination selection, make sure you have the correct information</p>}
-      {error ? null :<button onClick={handleClick}>{buttonText}</button>}
-      </Head>
+      {/* {errorText ? !null : errorText + <p> Their has been an error with your destination selection, make sure you have the correct information</p>} */}
+      {errorText ? null :<button onClick={handleClick}>{buttonText}</button>}
     </React.Fragment>
     
   );
