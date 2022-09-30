@@ -27,7 +27,7 @@ export default function Home() {
   // }, [selectedDestination])
 
   useEffect(() => {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=portland&appid=ca9b09be493e9b490939600e5793454f`)
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=portland&appid=${process.env.REACT_APP_API_KEY}`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`${response.status}: ${response.statusText}`);
