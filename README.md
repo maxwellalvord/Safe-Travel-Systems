@@ -21,3 +21,5 @@
 * 2:50: Refer to previous React projects and research next.js implementation
 * 4:30: Research APIs
 
+#### Friday, 09/30
+* 8:50: work on trello board and diagram

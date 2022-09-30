@@ -9,33 +9,33 @@ color: #5c8c9c;
 
 export default function Home() {
   
-  const [formVisableOnPage, setFormVisableOnPage] = useState(false); 
+  // const [formVisableOnPage, setFormVisableOnPage] = useState(false); 
   
-  let currentlyVisibleState = null;
+  // let currentlyVisibleState = null;
 
-  if (editing){
-    currentlyVisibleState = <EditDestinationForm
-    destination = {selectedDestination}
-    onEditDestination ={handleEditingDestinationList}
-    />;
-  }
-  else if (selectedDestination != null) {
-    currentlyVisibleState = <DestinationDetail
-    destination = {selectedDestination}
-    onClickingDelete = {handleDeletingDestination}
-    OnClickingEdit = {handleEditingDestination}
-    />;
-  } else if (formVisableOnPage) {
-    currentlyVisibleState = <newDestinationForm
-    onNewDestinationCreation = {handleChangingSelectedDestination}
-    />;
-  }
+  // if (editing){
+  //   currentlyVisibleState = <EditDestinationForm
+  //   destination = {selectedDestination}
+  //   onEditDestination ={handleEditingDestinationList}
+  //   />;
+  // }
+  // else if (selectedDestination != null) {
+  //   currentlyVisibleState = <DestinationDetail
+  //   destination = {selectedDestination}
+  //   onClickingDelete = {handleDeletingDestination}
+  //   OnClickingEdit = {handleEditingDestination}
+  //   />;
+  // } else if (formVisableOnPage) {
+  //   currentlyVisibleState = <newDestinationForm
+  //   onNewDestinationCreation = {handleChangingSelectedDestination}
+  //   />;
+  // }
 
 
   return (
     <>
       <Head>
-      <Header></Header>
+
       </Head>
     </>
   )
