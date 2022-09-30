@@ -34,8 +34,8 @@ export default function Home() {
       })
       .then((jsonifiedResponse) => {
         // We create an action and then dispatch it.
-        const action = getTopStoriesSuccess(jsonifiedResponse.results)
-        dispatch(action);
+        const apiResponse = jsonifiedResponse.results;
+        console.log(apiResponse);
       })
       .catch((error) => {
         // We create an action and then dispatch it. 
