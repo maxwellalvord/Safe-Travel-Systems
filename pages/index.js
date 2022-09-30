@@ -24,7 +24,7 @@ export default function Home() {
   const [editing, setEditing] = useState(false);
 
   useEffect(() => {
-    fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.REACT_APP_API_KEY}`)
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${selectedDestination.City}&appid=${process.env.REACT_APP_API_KEY}`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`${response.status}: ${response.statusText}`);
