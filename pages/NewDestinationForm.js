@@ -14,6 +14,15 @@ function NewDestinationForm(props){
     });
   }
 
+  // function handleNewDestinationApiCall(event) {
+  //   event.preventDefault();
+  //   props.onNewDestinationCreation({
+  //     City: event.target.City.value, 
+  //     Date: event.target.Date.value, 
+  //     id: v4()
+  //   });
+  // }
+
   return (
     <React.Fragment>
       <ReusableForm 

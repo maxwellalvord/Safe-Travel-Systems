@@ -13,32 +13,35 @@ color: #5c8c9c;
 `;
 
 export default function Home() {
+
+  let currentlyVisibleState = null;
+  let buttonText = null;
+  let errorText = null;
   
   const [formVisibleOnPage, setFormVisibleOnPage] = useState(false);
   const [mainDestinationList, setMainDestinationList] = useState([]);
   const [selectedDestination, setSelectedDestination] = useState(null); 
   const [editing, setEditing] = useState(false);
 
-  // useEffect(() => {
-  //   fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.REACT_APP_API_KEY}`)
-  //     .then(response => {
-  //       if (!response.ok) {
-  //         throw new Error(`${response.status}: ${response.statusText}`);
-  //       } else {
-  //         return response.json()
-  //       }
-  //     })
-  //     .then((jsonifiedResponse) => {
-  //       // We create an action and then dispatch it.
-  //       const action = getTopStoriesSuccess(jsonifiedResponse.results)
-  //       dispatch(action);
-  //     })
-  //     .catch((error) => {
-  //       // We create an action and then dispatch it. 
-  //       const action = getTopStoriesFailure(error.message)
-  //       dispatch(action);
-  //     });
-  //   }, [setMainDestinationList])
+  useEffect(() => {
+    fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.REACT_APP_API_KEY}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`${response.status}: ${response.statusText}`);
+        } else {
+          return response.json()
+        }
+      })
+      .then((jsonifiedResponse) => {
+        // We create an action and then dispatch it.
+        const action = getTopStoriesSuccess(jsonifiedResponse.results)
+        dispatch(action);
+      })
+      .catch((error) => {
+        // We create an action and then dispatch it. 
+        return errorText = error;
+      });
+    }, [handleAddingNewDestinationToList])
   
   const handleClick = () => {
     if (selectedDestination != null) {
@@ -72,6 +75,7 @@ export default function Home() {
   const handleAddingNewDestinationToList = (newDestination) => {
     const newMainDestinationList = mainDestinationList.concat(newDestination);
     setMainDestinationList(newMainDestinationList);
+    
     setFormVisibleOnPage(false)
   }
 
@@ -80,8 +84,7 @@ export default function Home() {
     setSelectedDestination(selection);
   }
 
-  let currentlyVisibleState = null;
-  let buttonText = null;
+ 
 
   if (editing){
     currentlyVisibleState = <EditDestinationForm
@@ -99,6 +102,7 @@ export default function Home() {
   } else if (formVisibleOnPage) {
     currentlyVisibleState = <NewDestinationForm
     onNewDestinationCreation = {handleAddingNewDestinationToList}
+    // onNewDestinationApiCreation = {handleAddingNewDestinationToApi}
     />
     buttonText = 'Return to Destination List';
   } else {
@@ -113,7 +117,8 @@ export default function Home() {
     <React.Fragment>
       <Head>
       {currentlyVisibleState}
-      {<button onClick={handleClick}>{buttonText}</button>}
+      {error ? !null : errorText + <p> Their has been an error with your destination selection, make sure you have the correct information</p>}
+      {error ? null :<button onClick={handleClick}>{buttonText}</button>}
       </Head>
     </React.Fragment>
     
