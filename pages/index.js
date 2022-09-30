@@ -14,11 +14,32 @@ color: #5c8c9c;
 
 export default function Home() {
   
-  const [formVisableOnPage, setFormVisibleOnPage] = useState(false);
+  const [formVisibleOnPage, setFormVisibleOnPage] = useState(false);
   const [mainDestinationList, setMainDestinationList] = useState([]);
   const [selectedDestination, setSelectedDestination] = useState(null); 
   const [editing, setEditing] = useState(false);
 
+  // useEffect(() => {
+  //   fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${process.env.REACT_APP_API_KEY}`)
+  //     .then(response => {
+  //       if (!response.ok) {
+  //         throw new Error(`${response.status}: ${response.statusText}`);
+  //       } else {
+  //         return response.json()
+  //       }
+  //     })
+  //     .then((jsonifiedResponse) => {
+  //       // We create an action and then dispatch it.
+  //       const action = getTopStoriesSuccess(jsonifiedResponse.results)
+  //       dispatch(action);
+  //     })
+  //     .catch((error) => {
+  //       // We create an action and then dispatch it. 
+  //       const action = getTopStoriesFailure(error.message)
+  //       dispatch(action);
+  //     });
+  //   }, [setMainDestinationList])
+  
   const handleClick = () => {
     if (selectedDestination != null) {
       setFormVisibleOnPage(false);
@@ -65,7 +86,7 @@ export default function Home() {
   if (editing){
     currentlyVisibleState = <EditDestinationForm
     destination = {selectedDestination}
-    onEditDestination ={handleEditingDestinationList}
+    onEditDestination ={handleEditingDestinationInList}
     />;
     buttonText = 'Return to Destination List';
   } else if (selectedDestination != null) {
@@ -75,7 +96,7 @@ export default function Home() {
     OnClickingEdit = {handleEditClick}
     />;
     buttonText = 'Return to Destination List';
-  } else if (formVisableOnPage) {
+  } else if (formVisibleOnPage) {
     currentlyVisibleState = <NewDestinationForm
     onNewDestinationCreation = {handleAddingNewDestinationToList}
     />

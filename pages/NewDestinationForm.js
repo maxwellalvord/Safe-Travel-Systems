@@ -8,9 +8,8 @@ function NewDestinationForm(props){
   function handleNewDestinationFormSubmission(event) {
     event.preventDefault();
     props.onNewDestinationCreation({
-      names: event.target.names.value, 
-      location: event.target.location.value, 
-      issue: event.target.issue.value, 
+      City: event.target.City.value, 
+      Date: event.target.Date.value, 
       id: v4()
     });
   }
@@ -19,7 +18,7 @@ function NewDestinationForm(props){
     <React.Fragment>
       <ReusableForm 
         formSubmissionHandler={handleNewDestinationFormSubmission}
-        buttonText="Help!" />
+        buttonText="Add Destination!" />
     </React.Fragment>
   );
 }
