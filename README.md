@@ -24,3 +24,4 @@
 #### Friday, 09/30
 * 8:50: work on trello board and diagram
 * 2:55: Review new Epicodus internship opportunity
+* 3:45: Research Next.js api implementation
