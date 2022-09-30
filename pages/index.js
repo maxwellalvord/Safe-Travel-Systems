@@ -1,12 +1,11 @@
 // import styles from '../styles/Home.module.css'
-import Header from './header';
 import styled from 'styled-components';
 import { useState } from 'react';
 import React from 'react';
-import NewDestinationForm from './NewDestinationForm';
-import DestinationList from './DestinationList';
-import EditDestinationForm from './EditDestinationForm';
-import DestinationDetail from './DestinationDetail';
+import NewDestinationForm from './newDestinationForm';
+import DestinationList from './destinationList';
+// import EditDestinationForm from './EditDestinationForm';
+import DestinationDetail from './destinationDetail';
 
 
 const Head = styled.a`
@@ -15,7 +14,7 @@ color: #5c8c9c;
 
 export default function Home() {
   
-  const [formVisableOnPage, setFormVisableOnPage] = useState(false);
+  const [formVisableOnPage, setFormVisibleOnPage] = useState(false);
   const [mainDestinationList, setMainDestinationList] = useState([]);
   const [selectedDestination, setSelectedDestination] = useState(null); 
   const [editing, setEditing] = useState(false);
@@ -61,37 +60,41 @@ export default function Home() {
   }
 
   let currentlyVisibleState = null;
+  let buttonText = null;
 
   if (editing){
     currentlyVisibleState = <EditDestinationForm
     destination = {selectedDestination}
     onEditDestination ={handleEditingDestinationList}
     />;
-  }
-  else if (selectedDestination != null) {
+    buttonText = 'Return to Destination List';
+  } else if (selectedDestination != null) {
     currentlyVisibleState = <DestinationDetail
     destination = {selectedDestination}
     onClickingDelete = {handleDeletingDestination}
     OnClickingEdit = {handleEditClick}
     />;
+    buttonText = 'Return to Destination List';
   } else if (formVisableOnPage) {
     currentlyVisibleState = <NewDestinationForm
     onNewDestinationCreation = {handleAddingNewDestinationToList}
-    />;
+    />
+    buttonText = 'Return to Destination List';
   } else {
     currentlyVisibleState = <DestinationList
     onDestinationSelection = {handleChangingSelectedDestination}
     destinationList = {mainDestinationList}
     /> 
+    buttonText = 'Add Destination'; 
   }
 
   return (
     <React.Fragment>
       <Head>
-        <Header />
-      </Head>
       {currentlyVisibleState}
-      {<button onClick={handleClick}>text</button>}
+      {<button onClick={handleClick}>{buttonText}</button>}
+      </Head>
     </React.Fragment>
+    
   );
 }
