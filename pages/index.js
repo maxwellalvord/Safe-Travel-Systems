@@ -27,19 +27,20 @@ export default function Home() {
   // }, [selectedDestination])
 
   useEffect(() => {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${selectedDestination}&appid=${process.env.REACT_APP_API_KEY}`)
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=portland&appid=ca9b09be493e9b490939600e5793454f`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`${response.status}: ${response.statusText}`);
         } else {
-          return response.json()
+          let jsonRepo = response.json()
+          return console.log(jsonRepo)
         }
       })
-      .then((jsonifiedResponse) => {
-        // We create an action and then dispatch it.
-        const apiResponse = jsonifiedResponse.results;
-        console.log(apiResponse);
-      })
+      // .then((jsonifiedResponse) => {
+      //   // We create an action and then dispatch it.
+      //   const apiResponse = jsonifiedResponse.results;
+      //   console.log(apiResponse);
+      // })
       .catch((error) => {
         // We create an action and then dispatch it. 
         return errorText = error;
