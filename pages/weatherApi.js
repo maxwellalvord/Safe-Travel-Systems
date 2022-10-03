@@ -7,7 +7,7 @@ async function weatherApi(city) {
           throw new Error(`${response.status}: ${response.statusText}`);
         } else {
           let jsonRepo = response.json()
-          return console.log(jsonRepo.results)
+          return console.log(jsonRepo)
         }
       })
       // .then((jsonifiedResponse) => {

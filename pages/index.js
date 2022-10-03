@@ -19,6 +19,9 @@ export default function Home() {
   const [mainDestinationList, setMainDestinationList] = useState([]);
   const [selectedDestination, setSelectedDestination] = useState(null); 
   const [editing, setEditing] = useState(false);
+  const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [topCity, setCity] = useState([]);
 
   // useEffect(() => {
   //   console.log(weatherApi.results);
@@ -26,10 +29,31 @@ export default function Home() {
       
   // }, [selectedDestination])
 
-  useEffect(() => {
-    weatherApi(selectedDestination); // 
-    }, [selectedDestination])
+  // useEffect(() => {
+  //   weatherApi(selectedDestination); 
+  //   }, [selectedDestination])
   
+  useEffect(() => {
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=portland&appid=${process.env.NEXT_PUBLIC_KEY}`)
+    .then(response => {
+        if (!response.ok) {
+          throw new Error(`${response.status}: ${response.statusText}`);
+        } else {
+          return response.json();
+        }
+      })
+    .then((jsonifiedResponse) => {
+        setCity(jsonifiedResponse.results)
+        setIsLoaded(true)
+        // console.log(topCity.coord)
+      })
+      .catch((error) => {
+        setError(error)
+        setIsLoaded(true)
+      });
+    }, [selectedDestination])
+
+
   const handleClick = () => {
     if (selectedDestination != null) {
       setFormVisibleOnPage(false);
