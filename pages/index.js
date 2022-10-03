@@ -5,7 +5,7 @@ import NewDestinationForm from './newDestinationForm';
 import DestinationList from './destinationList';
 // import EditDestinationForm from './EditDestinationForm';
 import DestinationDetail from './destinationDetail';
-// import weatherApi from './weatherApi';
+import weatherApi from './weatherApi';
 
 
 
@@ -27,24 +27,7 @@ export default function Home() {
   // }, [selectedDestination])
 
   useEffect(() => {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=portland&appid=${process.env.NEXT_PUBLIC_KEY}`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`${response.status}: ${response.statusText}`);
-        } else {
-          let jsonRepo = response.json()
-          return console.log(jsonRepo)
-        }
-      })
-      // .then((jsonifiedResponse) => {
-      //   // We create an action and then dispatch it.
-      //   const apiResponse = jsonifiedResponse.results;
-      //   console.log(apiResponse);
-      // })
-      .catch((error) => {
-        // We create an action and then dispatch it. 
-        return errorText = error;
-      });
+    weatherApi(selectedDestination); // 
     }, [selectedDestination])
   
   const handleClick = () => {
