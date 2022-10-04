@@ -7,7 +7,7 @@ export default function MainPage() {
     <React.Fragment>
       <div className="mainPage">
         <h1>Welcome to Safe Travel Systems!</h1>
-        <h3>This Site is currently in development.</h3>
+        <h3>This Site is currently in development!</h3>
         <div className="websiteInfo">
           <p>Safe Travel Systems has a goal of providing its user some of the most up to date and reliable data, so that our user are able to vacation to the fullest.</p>
         </div>
