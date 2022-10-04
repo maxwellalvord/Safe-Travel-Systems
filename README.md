@@ -26,3 +26,6 @@
 * 2:55: Review new Epicodus internship opportunity
 * 3:45: Research Next.js api implementation
 * 4:25: Research next.js environment variables
+
+#### Tuesday, 10/04
+* 1:40: Pivot from ideology of not following tutorials... following this for some basic functionality with a database and authorization (https://vercel.com/guides/nextjs-prisma-postgres) 
