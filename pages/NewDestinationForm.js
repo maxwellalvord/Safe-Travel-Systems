@@ -9,7 +9,8 @@ function NewDestinationForm(props){
     event.preventDefault();
     props.onNewDestinationCreation({
       City: event.target.City.value, 
-      Date: event.target.Date.value, 
+      Date: event.target.Date.value,
+      Info: event.target.Info.value,
       id: v4()
     });
   }

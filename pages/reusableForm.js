@@ -12,6 +12,10 @@ function ReusableForm(props) {
         <input
           type='date'
           name='Date'/>
+        <input
+          type="textarea"
+          name="Info"
+          placeholder="Describe your visit"/>
         <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>

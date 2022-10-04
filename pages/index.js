@@ -25,15 +25,15 @@ export default function Home() {
 
 
 
-  useEffect(() => {
-    (async function runEffect() {
-    const Api = await weatherApi()
-      console.log(Api)
-        .then (data => {
-        console.log(data)
-      })
-    })();   
-  }, [selectedDestination])
+  // useEffect(() => {
+  //   (async function runEffect() {
+  //   const Api = await weatherApi()
+  //     console.log(Api)
+  //       .then (data => {
+  //       console.log(data)
+  //     })
+  //   })();   
+  // }, [selectedDestination])
   
   // useEffect(() => {
   //   fetch(`http://api.openweathermap.org/data/2.5/weather?q=portland&appid=${process.env.NEXT_PUBLIC_KEY}`)
