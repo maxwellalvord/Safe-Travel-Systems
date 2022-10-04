@@ -28,4 +28,5 @@
 * 4:25: Research next.js environment variables
 
 #### Tuesday, 10/04
-* 1:40: Pivot from ideology of not following tutorials... following this for some basic functionality with a database and authorization (https://vercel.com/guides/nextjs-prisma-postgres) 
+* 1:40: Pivot from ideology of not following tutorials... following this for some basic functionality with a database and authorization (https://vercel.com/guides/nextjs-prisma-postgres)
+* 2:15: Restart tutorial project due to unknown error with next Auth
