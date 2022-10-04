@@ -36,7 +36,7 @@ function Ticket(props){
 Ticket.propTypes = {
   City: PropTypes.string,
   Date: PropTypes.date,
-  Info: PropTypes.textarea,
+  Info: PropTypes.string,
   id: PropTypes.string,
   whenTicketClicked: PropTypes.func
 }

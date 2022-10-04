@@ -53,9 +53,8 @@ function DestinationDetail(props){
         <h2>Destination Detail</h2>
         <H3>{destination.Date} {destination.City}</H3>
         <h2>{destination.Info}</h2>
-        <Button onClick={onClickingEdit}>Update Destination</Button>
+        {/* <Button onClick={onClickingEdit}>Update Destination</Button> */}
         <Button onClick={()=> onClickingDelete(destination.id)}>Close Destination</Button>
-        
         </HelpQueueDestinations>
       </HelpQueueDestination>
     </React.Fragment>

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import React from 'react';
 import NewDestinationForm from './newDestinationForm';
 import DestinationList from './destinationList';
-// import EditDestinationForm from './EditDestinationForm';
+import EditDestinationForm from './EditDestinationForm';
 import DestinationDetail from './destinationDetail';
 import weatherApi from './weatherApi';
 import MainPage from './MainPage';
@@ -19,10 +19,10 @@ export default function Home() {
   const [formVisibleOnPage, setFormVisibleOnPage] = useState(false);
   const [mainDestinationList, setMainDestinationList] = useState([]);
   const [selectedDestination, setSelectedDestination] = useState(null); 
-  const [editing, setEditing] = useState(false);
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [topCity, setCity] = useState([]);
+  // const [editing, setEditing] = useState(false);
+  // const [error, setError] = useState(null);
+  // const [isLoaded, setIsLoaded] = useState(false);
+  // const [topCity, setCity] = useState([]);
 
 
 
@@ -61,7 +61,7 @@ export default function Home() {
     if (selectedDestination != null) {
       setFormVisibleOnPage(false);
       setSelectedDestination(null);
-      setEditing(false);
+      // setEditing(false);
     } else {
       setFormVisibleOnPage(!formVisibleOnPage);
     }
@@ -100,13 +100,13 @@ export default function Home() {
 
  
 
-  if (editing){
-    currentlyVisibleState = <EditDestinationForm
-    destination = {selectedDestination}
-    onEditDestination ={handleEditingDestinationInList}
-    />;
-    buttonText = 'Return to Destination List';
-  } else if (selectedDestination != null) {
+  // if (editing == true){
+  //   currentlyVisibleState = <EditDestinationForm
+  //   destination = {selectedDestination}
+  //   onEditDestination ={handleEditingDestinationInList}
+  //   />;
+  //   buttonText = 'Return to Destination List';
+  if (selectedDestination != null) {
     currentlyVisibleState = <DestinationDetail
     destination = {selectedDestination}
     onClickingDelete = {handleDeletingDestination}

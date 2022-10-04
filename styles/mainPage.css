@@ -1,4 +1,19 @@
 .mainPage {
   text-align: center;
   border: 1px solid #5c8c9c;
+  margin: 1.2rem;
+}
+
+.expectList {
+  list-style: none;
+}
+
+h1 {
+  border: 2px solid transparent;
+  background-color: antiquewhite;
+  border-radius: 1rem;
+  color: #5c8c9c;
+  margin-left: 30%;
+  margin-right: 30%;
+  text-align: center;
 }

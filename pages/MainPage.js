@@ -16,7 +16,7 @@ export default function MainPage() {
           <ul className="expectList">
             <li>Allow users to sign in</li>
             <li>Allow users to users to save destination/ have them connected to their account</li>
-            <li>Allow program to take city and date and input into Api call</li>
+            <li>Allow program to take city and date input and use it to make Api calls</li>
           </ul>
         </div>
       </div>  
