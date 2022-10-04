@@ -17,16 +17,17 @@ function DestinationList(props){
 
   return (
     <React.Fragment>
+      
       <Dest>
-      {props.destinationList.map((destination) =>
-        <Destination 
-          whenDestinationClicked={props.onDestinationSelection}
-          City={destination.City}
-          Date={destination.Date}
-          Info={destination.Info}
-          id={destination.id}
-          key={destination.id}/>
-      )}
+          {props.destinationList.map((destination) =>
+            <Destination 
+              whenDestinationClicked={props.onDestinationSelection}
+              City={destination.City}
+              Date={destination.Date}
+              Info={destination.Info}
+              id={destination.id}
+              key={destination.id}/>
+          )}
       </Dest>
     </React.Fragment>
   );

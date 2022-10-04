@@ -6,6 +6,7 @@ import DestinationList from './destinationList';
 // import EditDestinationForm from './EditDestinationForm';
 import DestinationDetail from './destinationDetail';
 import weatherApi from './weatherApi';
+import MainPage from './MainPage';
 
 
 
@@ -118,6 +119,12 @@ export default function Home() {
     // onNewDestinationApiCreation = {handleAddingNewDestinationToApi}
     />
     buttonText = 'Return to Destination List';
+  } else if (mainDestinationList.length == 0 ){
+    currentlyVisibleState = <MainPage
+    // onDestinationSelection = {handleChangingSelectedDestination}
+    // destinationList = {mainDestinationList}
+    /> 
+    buttonText = 'Add Destination'; 
   } else {
     currentlyVisibleState = <DestinationList
     onDestinationSelection = {handleChangingSelectedDestination}
