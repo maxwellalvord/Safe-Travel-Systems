@@ -23,35 +23,37 @@ export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [topCity, setCity] = useState([]);
 
-  // useEffect(() => {
-  //   console.log(weatherApi.results);
 
-      
-  // }, [selectedDestination])
 
-  // useEffect(() => {
-  //   weatherApi(selectedDestination); 
-  //   }, [selectedDestination])
-  
   useEffect(() => {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=portland&appid=${process.env.NEXT_PUBLIC_KEY}`)
-    .then(response => {
-        if (!response.ok) {
-          throw new Error(`${response.status}: ${response.statusText}`);
-        } else {
-          return response.json();
-        }
+    (async function runEffect() {
+    const Api = await weatherApi()
+      console.log(Api)
+        .then (data => {
+        console.log(data)
       })
-    .then((jsonifiedResponse) => {
-        setCity(jsonifiedResponse.results)
-        setIsLoaded(true)
-        // console.log(topCity.coord)
-      })
-      .catch((error) => {
-        setError(error)
-        setIsLoaded(true)
-      });
-    }, [selectedDestination])
+    })();   
+  }, [selectedDestination])
+  
+  // useEffect(() => {
+  //   fetch(`http://api.openweathermap.org/data/2.5/weather?q=portland&appid=${process.env.NEXT_PUBLIC_KEY}`)
+  //   .then(response => {
+  //       if (!response.ok) {
+  //         throw new Error(`${response.status}: ${response.statusText}`);
+  //       } else {
+  //         return response.json();
+  //       }
+  //     })
+  //   .then((jsonifiedResponse) => {
+  //       setCity(jsonifiedResponse.results)
+  //       setIsLoaded(true)
+  //       console.log(topCity.coord)
+  //     })
+  //     .catch((error) => {
+  //       setError(error)
+  //       setIsLoaded(true)
+  //     });
+  //   }, [selectedDestination])
 
 
   const handleClick = () => {
