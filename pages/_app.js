@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import Header from './header'
 import React from 'react'
 import styled from 'styled-components';
+import '../styles/MainPage.css'
 
 const Head = styled.a`
 color: #5c8c9c;
