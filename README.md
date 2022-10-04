@@ -1,3 +1,32 @@
+# Safe Travel Systems
+
+## by Maxwell Alvord
+
+### This is a webpage in development with the end goal of having a one stop shop for all information regarding safe vacationing  
+
+## Technologies Used
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="50" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="50"/>
+          
+### Description
+This is a passion project that is currently in development as a project to put my NEXT.js skills to use. Safe Travel Systems aims to provide a Friendly UI and database to allow users to search and save information for their travels that might prove useful. The application of NEXT.js allows for an effecient framework of "pages" that are dynamically rendered. The ultimate goal was to use Vercel (NEXT.js deployment tool) to deploy the site stress free. 
+
+## Setup/Installation
+* Clone this Repo : <https://github.com/maxwellalvord/Safe-Travel-Systems>
+* cd into Safe-Travel-Systems
+
+In the project directory (Safe-Travel-Systems), you can run:
+
+### `npm start`
+
+### `npm run build`
+
+### `npm run lint`
+
+---
 ### Research & Planning Log
 #### Friday, 09/16
 * 8:30: create framework, starting steps etc
@@ -12,7 +41,6 @@
 * 3:10: Research next auth and databases to use and how to host the database
 * 3:55: Research Railway.app
 * 4:30: Research Possible APIs
----
 #### Friday, 09/23
 * 9:00: Read and research Vercel documentation
 * 10:00: Research Next.js layout and Start building a diagram
