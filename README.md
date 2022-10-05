@@ -10,9 +10,14 @@
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="50" />
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="50"/>
+
+<div style="display: flex; justify-content: center"><img src="./stspic.png"></div>
           
 ### Description
 This is a passion project that is currently in development as a project to put my NEXT.js skills to use. Safe Travel Systems aims to provide a Friendly UI and database to allow users to search and save information for their travels that might prove useful. The application of NEXT.js allows for an effecient framework of "pages" that are dynamically rendered. The ultimate goal was to use Vercel (NEXT.js deployment tool) to deploy the site stress free. 
+
+## Live Site
+* Bypass all setup and installation by visiting the live site at <a href='https://safe-travel-systems.vercel.app/'>Safe-Travel-Systems</a> (https://safe-travel-systems.vercel.app/)!
 
 ## Setup/Installation
 * Clone this Repo : <https://github.com/maxwellalvord/Safe-Travel-Systems>
@@ -20,11 +25,16 @@ This is a passion project that is currently in development as a project to put m
 
 In the project directory (Safe-Travel-Systems), you can run:
 
-### `npm start`
+### `npm run dev`
 
 ### `npm run build`
 
 ### `npm run lint`
+
+## Known Bugs
+* input type textarea not rendering correctly.
+* hydration Error in Dev environment, all styling renders correctly.
+* Partial incorrect font render on live site.
 
 ---
 ### Research & Planning Log
