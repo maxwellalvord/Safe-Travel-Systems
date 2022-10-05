@@ -6,7 +6,7 @@ export default function About() {
         <div className="aboutMe">
           <h2>My name is Maxwell Alvord!</h2>
           <h3>A little about me</h3>
-          <p>I am a Developer from Portland Oregon who grew up with early mornings on the ski hill and late nights out with friends. As I have gotten older my hometown and mountain have become places I call home, provoking curiosity of what the rest of the world has for me. From there I've developed the idea to have a website where users with the same aspirations as me can look in one place for all the information they might need in travels in an unknown land</p>
+          <p>I am a Developer from Portland Oregon who grew up with early mornings on the ski hill and late nights out with friends. As I have gotten older my hometown and mountain have become places I call home, provoking curiosity of what the rest of the world has for me. From there I have developed the idea to have a website where users with the same aspirations as me can look in one place for all the information they might need in travels in an unknown land</p>
         </div>
         <div className="aboutTitle">
           <h1>About Safe Travel Systems</h1>
