@@ -43,6 +43,7 @@ cursor: pointer;
 `;
 
 export default function DestinationDetail(props){
+  
   const { destination, onClickingDelete } = props; 
 
   return (

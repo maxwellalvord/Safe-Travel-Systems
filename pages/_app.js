@@ -10,7 +10,6 @@ import '../styles/footer.css'
 import '../styles/about.css'
 import '../styles/destinationDetail.css'
 
-
 const Head = styled.a`
 color: #5c8c9c;
 `;

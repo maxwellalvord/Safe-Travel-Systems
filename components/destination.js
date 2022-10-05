@@ -20,8 +20,7 @@ color: #FFFBC8;
 
 export default function Ticket(props){
 
-  return (
-    
+  return (  
     <React.Fragment>
       <Individual>
       <div onClick = {() => props.whenDestinationClicked(props.id)}>

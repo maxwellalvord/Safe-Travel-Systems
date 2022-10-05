@@ -36,8 +36,6 @@ export default function Home() {
   // const [isLoaded, setIsLoaded] = useState(false);
   // const [topCity, setCity] = useState([]);
 
-
-
   // useEffect(() => {
   //   (async function runEffect() {
   //   const Api = await weatherApi()
@@ -110,14 +108,14 @@ export default function Home() {
     setSelectedDestination(selection);
   }
 
- 
-
   // if (editing == true){
   //   currentlyVisibleState = <EditDestinationForm
   //   destination = {selectedDestination}
   //   onEditDestination ={handleEditingDestinationInList}
   //   />;
   //   buttonText = 'Return to Destination List';
+
+
   if (selectedDestination != null) {
     currentlyVisibleState = <DestinationDetail
     destination = {selectedDestination}
@@ -153,6 +151,5 @@ export default function Home() {
       {errorText ? null :<button onClick={handleClick}>{buttonText}</button>}
       </CenterMain>
     </React.Fragment>
-    
   );
 }

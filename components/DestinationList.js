@@ -3,7 +3,6 @@ import Destination from './destination';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-
 const Dest = styled.ul`
   background-color: #0EA268;
   width: 1230px;
