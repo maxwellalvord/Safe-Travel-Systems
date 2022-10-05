@@ -3,7 +3,7 @@ import { v4 } from 'uuid';
 import PropTypes from "prop-types"; 
 import ReusableForm from "./reusableForm";
 
-function NewDestinationForm(props){
+export default function NewDestinationForm(props){
 
   function handleNewDestinationFormSubmission(event) {
     event.preventDefault();
@@ -39,5 +39,3 @@ function NewDestinationForm(props){
 NewDestinationForm.propTypes = {
   onNewDestinationCreation: PropTypes.func
 };
-
-export default NewDestinationForm;

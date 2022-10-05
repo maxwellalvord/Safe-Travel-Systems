@@ -41,10 +41,8 @@ border-radius: 10px;
 cursor: pointer;
 `;
 
-function DestinationDetail(props){
-  const { destination, onClickingDelete, onClickingEdit } = props; 
-
-
+export default function DestinationDetail(props){
+  const { destination, onClickingDelete } = props; 
 
   return (
     <React.Fragment>
@@ -66,5 +64,3 @@ DestinationDetail.propTypes = {
   onClickingDelete: PropTypes.func,
   onClickingEdit: PropTypes.func 
 };
-
-export default DestinationDetail;

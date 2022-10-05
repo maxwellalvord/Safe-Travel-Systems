@@ -13,7 +13,7 @@ const Dest = styled.ul`
   border-radius: 10px;
 `;
 
-function DestinationList(props){
+export default function DestinationList(props){
 
   return (
     <React.Fragment>
@@ -37,5 +37,3 @@ DestinationList.propTypes = {
   destinationList: PropTypes.array,
   onDestinationSelection: PropTypes.func
 };
-
-export default DestinationList;

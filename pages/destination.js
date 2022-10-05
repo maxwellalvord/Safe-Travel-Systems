@@ -18,7 +18,7 @@ font-size: 22px;
 color: #FFFBC8;
 `;
 
-function Ticket(props){
+export default function Ticket(props){
 
   return (
     
@@ -40,5 +40,3 @@ Ticket.propTypes = {
   id: PropTypes.string,
   whenTicketClicked: PropTypes.func
 }
-
-export default Ticket;
