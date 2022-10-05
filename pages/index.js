@@ -1,12 +1,12 @@
 // import styles from '../styles/Home.module.css'
 import { useState, useEffect } from 'react';
 import React from 'react';
-import NewDestinationForm from './NewDestinationForm';
-import DestinationList from './DestinationList';
+import NewDestinationForm from '../components/NewDestinationForm';
+import DestinationList from '../components/DestinationList';
 // import EditDestinationForm from './editDestinationForm';
-import DestinationDetail from './DestinationDetail';
+import DestinationDetail from '../components/DestinationDetail';
 // import weatherApi from './weatherApi';
-import MainPage from './MainPage';
+import MainPage from '../components/MainPage';
 import styled from 'styled-components';
 
 const CenterMain = styled.button`
