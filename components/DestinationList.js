@@ -18,7 +18,6 @@ export default function DestinationList(props){
 
   return (
     <React.Fragment>
-      
       <Dest>
           {props.destinationList.map((destination) =>
             <Destination 
