@@ -1,21 +1,39 @@
 .inputCity {
-  border: 1px solid rosybrown;
+  border: 2px solid rosybrown;
   border-radius: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-top: 10%;
 }
 
 .form {
-  margin-left: 40%;
-  margin-right: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 10%;
 }
 
 .inputDate {
-  border: 1px solid rosybrown;
+  border: 2px solid rosybrown;
   border-radius: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-top: 10%;
 }
 
 .inputInfo {
-  border: 1px solid rosybrown;
+  border: 2px solid rosybrown;
   border-radius: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-top: 10%;
+  width: 500px;
+  height: 250px;
 }
 
 .formBackground {
@@ -26,4 +44,21 @@
   align-items: center;
   width: 90rem;
   margin: auto;
+  margin-top: 3%;
+}
+
+.formTitle {
+  text-align: center;
+}
+
+.formBtn {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 1230px;
+  color: #FFFBC8;
+  padding: 25px;
+  margin: auto;
+  background-color: #6495ED;
+  border-radius: 10px;
 }

@@ -26,6 +26,9 @@ function NewDestinationForm(props){
 
   return (
     <React.Fragment>
+      <div className="formTitle">
+        <h1>Enter a City you are visiting then enter the date you are going!</h1>
+      </div>
       <ReusableForm 
         formSubmissionHandler={handleNewDestinationFormSubmission}
         buttonText="Add Destination!" />
