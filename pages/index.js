@@ -2,9 +2,9 @@
 import { useState, useEffect } from 'react';
 import React from 'react';
 import NewDestinationForm from './NewDestinationForm';
-import DestinationList from './destinationList';
+import DestinationList from './DestinationList';
 // import EditDestinationForm from './editDestinationForm';
-import DestinationDetail from './destinationDetail';
+import DestinationDetail from './DestinationDetail';
 // import weatherApi from './weatherApi';
 import MainPage from './MainPage';
 import styled from 'styled-components';
