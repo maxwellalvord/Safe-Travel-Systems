@@ -7,7 +7,9 @@
 ## Technologies Used
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="50" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50"/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="50"/>
 
-<img src="./stspic.png"> ![](./stspic.png)
+<img src="./stspic.png"> 
+
+![](./stspic.png)
           
 ### Description
 This is a passion project that is currently in development as a project to put my NEXT.js skills to use. Safe Travel Systems aims to provide a Friendly UI and database to allow users to search and save information for their travels that might prove useful. The application of NEXT.js allows for an effecient framework of "pages" that are dynamically rendered. The ultimate goal was to use Vercel (NEXT.js deployment tool) to deploy the site stress free. 
