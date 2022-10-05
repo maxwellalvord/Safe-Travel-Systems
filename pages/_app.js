@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import '../styles/mainPage.css'
 import '../styles/header.css'
 import '../styles/reusableForm.css'
+import Footer from './footer'
+import '../styles/footer.css'
 
 
 const Head = styled.a`
@@ -15,6 +17,7 @@ function MyApp({ Component, pageProps }) {
   return <React.Fragment>
       <Head><Header /></Head>
       <Component {...pageProps} />
+      <Footer/>
     </React.Fragment>
 }
 

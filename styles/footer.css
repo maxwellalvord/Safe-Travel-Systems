@@ -1,0 +1,8 @@
+.footer {
+  text-align: center;
+  border: 1px dashed rosybrown;
+  border-radius: 1rem;
+  width: 800px;
+  margin: auto;
+  margin-top: 3%;
+}

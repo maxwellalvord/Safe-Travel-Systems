@@ -2,6 +2,9 @@
   text-align: center;
   border: 1px solid #5c8c9c;
   margin: 1.2rem;
+  margin-top: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .expectList {
