@@ -8,6 +8,7 @@ import '../styles/reusableForm.css'
 import Footer from '../components/footer'
 import '../styles/footer.css'
 import '../styles/about.css'
+import '../styles/destinationDetail.css'
 
 
 const Head = styled.a`

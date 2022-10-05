@@ -7,7 +7,7 @@ const Dest = styled.ul`
   background-color: #0EA268;
   width: 1230px;
   margin: auto;
-  margin-top: 1px;
+  margin-top: 4%;
   border: 2px solid #FFFBC8;
   padding: 25px;
   border-radius: 10px;

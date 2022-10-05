@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const HelpQueueDestinations = styled.div`
+const MainDestinations = styled.div`
 background-color: #2CE32F;
 width: 300px;
 margin: auto;
@@ -17,7 +17,7 @@ const H3 = styled.h3`
 font-size: 22px;
 color: #FFFBC8;
 `
-const HelpQueueDestination = styled.div`
+const MainDestination = styled.div`
 background-color: #0EA268;
 width: 1280px;
 margin: auto;
@@ -25,6 +25,7 @@ border: 2px solid #FFFBC8;
 padding-top: 150px;
 padding-bottom: 150px;
 border-radius: 10px;
+
 `;
 
 const Button = styled.button`
@@ -46,15 +47,17 @@ export default function DestinationDetail(props){
 
   return (
     <React.Fragment>
-      <HelpQueueDestination>
-        <HelpQueueDestinations>
-        <h2>Destination Detail</h2>
-        <H3>{destination.Date} {destination.City}</H3>
-        <h2>{destination.Info}</h2>
-        {/* <Button onClick={onClickingEdit}>Update Destination</Button> */}
-        <Button onClick={()=> onClickingDelete(destination.id)}>Close Destination</Button>
-        </HelpQueueDestinations>
-      </HelpQueueDestination>
+      <div className='detail'>
+        <MainDestination>
+          <MainDestinations>
+          <h2>Destination Detail</h2>
+          <H3>{destination.Date} {destination.City}</H3>
+          <h2>{destination.Info}</h2>
+          {/* <Button onClick={onClickingEdit}>Update Destination</Button> */}
+          <Button onClick={()=> onClickingDelete(destination.id)}>Close Destination</Button>
+          </MainDestinations>
+        </MainDestination>
+      </div>
     </React.Fragment>
   );
 }
