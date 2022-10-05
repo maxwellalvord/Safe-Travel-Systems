@@ -6,6 +6,7 @@
   align-items: center;
   margin: auto;
   margin-top: 10%;
+  height: 45px;
 }
 
 .form {
@@ -22,6 +23,7 @@
   align-items: center;
   margin: auto;
   margin-top: 10%;
+  height: 45px;
 }
 
 .inputInfo {
@@ -52,13 +54,5 @@
 }
 
 .formBtn {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  width: 1230px;
-  color: #FFFBC8;
-  padding: 25px;
-  margin: auto;
-  background-color: #6495ED;
-  border-radius: 10px;
+  background-color: aqua;
 }

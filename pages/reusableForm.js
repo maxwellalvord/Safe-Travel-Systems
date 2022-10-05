@@ -1,5 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const Center = styled.button`
+display: flex;
+justify-content: center;
+text-align: center;
+color: #FFFBC8;
+padding: 7px;
+margin: auto;
+background-color: #6495ED;
+border-radius: 10px;
+margin-top: 9%;
+`;
+
 
 function ReusableForm(props) {
   return (
@@ -23,7 +37,9 @@ function ReusableForm(props) {
             name="Info"
             placeholder="Describe your visit"/>
           <br></br>
+          <Center>
           <button className="btn btn-blue" type='submit'>{props.buttonText}</button>
+          </Center>
         </form>
       </div>
     </React.Fragment>

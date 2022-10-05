@@ -1,14 +1,26 @@
 // import styles from '../styles/Home.module.css'
 import { useState, useEffect } from 'react';
 import React from 'react';
-import NewDestinationForm from './newDestinationForm';
+import NewDestinationForm from './NewDestinationForm';
 import DestinationList from './destinationList';
 // import EditDestinationForm from './editDestinationForm';
 import DestinationDetail from './destinationDetail';
 // import weatherApi from './weatherApi';
 import MainPage from './MainPage';
+import styled from 'styled-components';
 
-
+const CenterMain = styled.button`
+display: flex;
+justify-content: center;
+text-align: center;
+color: #5c8c9c;
+padding: 7px;
+margin: auto;
+background-color: #5c8c9c;
+border-radius: 10px;
+margin-top: 4%;
+width: 400px;
+`;
 
 export default function Home() {
 
@@ -137,7 +149,9 @@ export default function Home() {
     <React.Fragment>
       {currentlyVisibleState}
       {/* {errorText ? !null : errorText + <p> Their has been an error with your destination selection, make sure you have the correct information</p>} */}
+      <CenterMain>
       {errorText ? null :<button onClick={handleClick}>{buttonText}</button>}
+      </CenterMain>
     </React.Fragment>
     
   );
