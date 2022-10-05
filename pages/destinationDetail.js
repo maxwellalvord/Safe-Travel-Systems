@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const HelpQueueDestinations = styled.div`
-background-color: #f5b700;
+background-color: #2CE32F;
 width: 300px;
 margin: auto;
 padding: 45px;
@@ -18,7 +18,7 @@ font-size: 22px;
 color: #FFFBC8;
 `
 const HelpQueueDestination = styled.div`
-background-color: #F8D86E;
+background-color: #0EA268;
 width: 1280px;
 margin: auto;
 border: 2px solid #FFFBC8;
@@ -28,7 +28,7 @@ border-radius: 10px;
 `;
 
 const Button = styled.button`
-background-color: #f5b700;
+background-color: #5c8c9c;
 border: 2px solid #FFFBC8;
 margin: 10px;
 color: #FFFBC8;

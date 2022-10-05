@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Individual = styled.div`
-background-color: #f5b700;
+background-color: #2CE32F;
 width: 300px;
 margin: auto;
 margin-top: 15px;

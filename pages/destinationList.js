@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Dest = styled.ul`
-  background-color: #F8D86E;
+  background-color: #0EA268;
   width: 1230px;
   margin: auto;
   margin-top: 1px;
