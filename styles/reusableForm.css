@@ -1,0 +1,29 @@
+.inputCity {
+  border: 1px solid rosybrown;
+  border-radius: 1rem;
+}
+
+.form {
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+.inputDate {
+  border: 1px solid rosybrown;
+  border-radius: 1rem;
+}
+
+.inputInfo {
+  border: 1px solid rosybrown;
+  border-radius: 1rem;
+}
+
+.formBackground {
+  border: 1rem solid transparent;
+  background: #F8D86E;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  width: 90rem;
+  margin: auto;
+}

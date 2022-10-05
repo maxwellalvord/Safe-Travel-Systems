@@ -4,6 +4,7 @@ import React from 'react'
 import styled from 'styled-components';
 import '../styles/MainPage.css'
 import '../styles/header.css'
+import '../styles/reusableForm.css'
 
 
 const Head = styled.a`
