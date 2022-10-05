@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react';
 import React from 'react';
 import NewDestinationForm from './newDestinationForm';
 import DestinationList from './destinationList';
-import EditDestinationForm from './EditDestinationForm';
+// import EditDestinationForm from './editDestinationForm';
 import DestinationDetail from './destinationDetail';
-import weatherApi from './weatherApi';
+// import weatherApi from './weatherApi';
 import MainPage from './MainPage';
 
 
