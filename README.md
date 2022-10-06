@@ -71,3 +71,4 @@ In the project directory (Safe-Travel-Systems), you can run:
 
 #### Thursday, 10/6
 * 8:15: Research Api calls in use effect hooks (https://www.digitalocean.com/community/tutorials/how-to-call-web-apis-with-the-useeffect-hook-in-react)
+* 10:20: find another source for api calls in use effect hooks (https://devtrium.com/posts/async-functions-useeffect)
