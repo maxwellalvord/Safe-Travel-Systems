@@ -9,7 +9,7 @@ import DestinationDetail from '../components/DestinationDetail';
 import MainPage from '../components/MainPage';
 import styled from 'styled-components';
 import db from '../firebase.js';
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, onSnapshot } from "firebase/firestore";
 
 const CenterMain = styled.button`
 display: flex;
@@ -34,9 +34,32 @@ export default function Home() {
   const [mainDestinationList, setMainDestinationList] = useState([]);
   const [selectedDestination, setSelectedDestination] = useState(null); 
   // const [editing, setEditing] = useState(false);
-  // const [error, setError] = useState(null);
+  const [error, setError] = useState(null);
   // const [isLoaded, setIsLoaded] = useState(false);
   // const [topCity, setCity] = useState([]);
+
+
+  useEffect(() => { 
+    const unSubscribe = onSnapshot(
+      collection(db, "destinations"), 
+      (collectionSnapshot) => {
+        const destinations = [];
+        collectionSnapshot.forEach((doc) => {
+            destinations.push({
+              ... doc.data(),
+              id: doc.id
+            });
+        });
+        setMainDestinationList(destinations);
+      }, 
+      (error) => {
+        setError(error.message);
+      }
+    );
+
+    return () => unSubscribe();
+  }, []);
+
 
   // useEffect(() => {
   //   (async function runEffect() {
@@ -116,7 +139,9 @@ export default function Home() {
   //   buttonText = 'Return to Destination List';
 
 
-  if (selectedDestination != null) {
+  if (error) {
+    currentlyVisibleState = <p>There was an error: {error}</p>
+  } else if (selectedDestination != null) {
     currentlyVisibleState = <DestinationDetail
     destination = {selectedDestination}
     onClickingDelete = {handleDeletingDestination}
@@ -148,7 +173,7 @@ export default function Home() {
       {currentlyVisibleState}
       {/* {errorText ? !null : errorText + <p> Their has been an error with your destination selection, make sure you have the correct information</p>} */}
       <CenterMain>
-      {errorText ? null :<button onClick={handleClick}>{buttonText}</button>}
+      {error ? null : <button onClick={handleClick}>{buttonText}</button>}
       </CenterMain>
     </React.Fragment>
   );
