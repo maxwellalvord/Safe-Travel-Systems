@@ -8,6 +8,8 @@ import DestinationDetail from '../components/DestinationDetail';
 // import weatherApi from './weatherApi';
 import MainPage from '../components/MainPage';
 import styled from 'styled-components';
+import db from '../firebase.js';
+import { collection, addDoc } from "firebase/firestore";
 
 const CenterMain = styled.button`
 display: flex;
@@ -96,11 +98,9 @@ export default function Home() {
     setSelectedDestination(null);
   }
 
-  const handleAddingNewDestinationToList = (newDestination) => {
-    const newMainDestinationList = mainDestinationList.concat(newDestination);
-    setMainDestinationList(newMainDestinationList);
-    
-    setFormVisibleOnPage(false)
+  const handleAddingNewDestinationToList = async (newDestinationData) => {
+    await addDoc(collection(db, "destinations"), newDestinationData);
+    setFormVisibleOnPage(false);
   }
 
   const handleChangingSelectedDestination = (id) => {

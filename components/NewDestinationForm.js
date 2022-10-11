@@ -1,5 +1,5 @@
 import React from "react";
-import { v4 } from 'uuid';
+// import { v4 } from 'uuid';
 import PropTypes from "prop-types"; 
 import ReusableForm from "./reusableForm";
 
@@ -11,7 +11,7 @@ export default function NewDestinationForm(props){
       City: event.target.City.value, 
       Date: event.target.Date.value,
       Info: event.target.Info.value,
-      id: v4()
+      // id: v4()
     });
   }
 
