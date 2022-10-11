@@ -8,7 +8,7 @@ import DestinationDetail from '../components/DestinationDetail';
 // import weatherApi from './weatherApi';
 import MainPage from '../components/MainPage';
 import styled from 'styled-components';
-import db from '../firebase.js';
+import { db } from '../firebase.js';
 import { collection, addDoc, onSnapshot, doc, updateDoc, deleteDoc } from "firebase/firestore";
 
 const CenterMain = styled.button`
