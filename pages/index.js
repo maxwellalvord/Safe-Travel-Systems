@@ -9,7 +9,7 @@ import DestinationDetail from '../components/DestinationDetail';
 import MainPage from '../components/MainPage';
 import styled from 'styled-components';
 import db from '../firebase.js';
-import { collection, addDoc, onSnapshot } from "firebase/firestore";
+import { collection, addDoc, onSnapshot, doc, updateDoc, deleteDoc } from "firebase/firestore";
 
 const CenterMain = styled.button`
 display: flex;
@@ -102,25 +102,19 @@ export default function Home() {
     }
   }
 
-  const handleDeletingDestination = (id) => {
-    const newMainDestinationList = mainDestinationList.filter(destination => destination.id !== id);
-    setMainDestinationList(newMainDestinationList);
+  const handleDeletingDestination = async (id) => {
+    await deleteDoc(doc(db, "destinations", id));
     setSelectedDestination(null);
-  }
-
+  } 
   const handleEditClick = () => {
     setEditing(true);
   }
 
-  const handleEditingDestinationInList = (destinationToEdit) => {
-    const editedMainDestinationList = mainDestinationList
-    .filter(destination => destination.id !== selectedDestination.id)
-    .concat(destinationToEdit);
-    setMainDestinationList(editedMainDestinationList);
+  const handleEditingDestinationInList = async (destinationToEdit) => {
+    await updateDoc(doc(db, "destinations", destinationToEdit.id), destinationToEdit);
     setEditing(false);
     setSelectedDestination(null);
   }
-
   const handleAddingNewDestinationToList = async (newDestinationData) => {
     await addDoc(collection(db, "destinations"), newDestinationData);
     setFormVisibleOnPage(false);
