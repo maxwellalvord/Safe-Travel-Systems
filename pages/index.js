@@ -8,7 +8,7 @@ import DestinationDetail from '../components/DestinationDetail';
 // import weatherApi from './weatherApi';
 import MainPage from '../components/MainPage';
 import styled from 'styled-components';
-import { db } from '../firebase.js';
+import { db, auth } from '../firebase.js';
 import { collection, addDoc, onSnapshot, doc, updateDoc, deleteDoc } from "firebase/firestore";
 
 const CenterMain = styled.button`
@@ -133,7 +133,18 @@ export default function Home() {
   //   buttonText = 'Return to Destination List';
 
 
-  if (error) {
+  if (auth.currentUser == null) {
+    return (
+      <React.Fragment>
+        <h1>You must be signed in to access the Safe Travel Systems.</h1>
+      </React.Fragment>
+    )
+  } else if (auth.currentUser != null) {
+
+    let currentlyVisibleState = null;
+    let buttonText = null; 
+
+    if (error) {
     currentlyVisibleState = <p>There was an error: {error}</p>
   } else if (selectedDestination != null) {
     currentlyVisibleState = <DestinationDetail
@@ -162,13 +173,14 @@ export default function Home() {
     buttonText = 'Add Destination'; 
   }
 
-  return (
-    <React.Fragment>
-      {currentlyVisibleState}
-      {/* {errorText ? !null : errorText + <p> Their has been an error with your destination selection, make sure you have the correct information</p>} */}
-      <CenterMain>
-      {error ? null : <button onClick={handleClick}>{buttonText}</button>}
-      </CenterMain>
-    </React.Fragment>
-  );
+    return (
+      <React.Fragment>
+        {currentlyVisibleState}
+        {/* {errorText ? !null : errorText + <p> Their has been an error with your destination selection, make sure you have the correct information</p>} */}
+        <CenterMain>
+        {error ? null : <button onClick={handleClick}>{buttonText}</button>}
+        </CenterMain>
+      </React.Fragment>
+    );
+  }
 }
