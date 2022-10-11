@@ -34,6 +34,7 @@ In the project directory (Safe-Travel-Systems), you can run:
 * Hydration Error in Dev environment, all styling still renders correctly.
 * Partial incorrect font render on live site.
 * Render is squished in mobile version.
+* Live site a couple commits behind due to firebase vercel api authentication issues, receiving (FirebaseError: Firebase: Error (auth/invalid-api-key)). I have tried allowind the live site to be an authorized domain via firebase.
 
 ---
 ### Research & Planning Log
